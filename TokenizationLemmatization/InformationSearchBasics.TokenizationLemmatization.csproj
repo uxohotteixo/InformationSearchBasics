@@ -10,7 +10,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Lemmatizer\Lemmatizer.csproj" />
+      <ProjectReference Include="..\Lemmatizer\InformationSearchBasics.Lemmatizer.csproj" />
     </ItemGroup>
 
     <ItemGroup>

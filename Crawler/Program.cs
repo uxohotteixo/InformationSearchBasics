@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Threading.Tasks;
-using Crawler.Crawler;
+using InformationSearchBasics.Crawler.Crawler;
 
-namespace Crawler
+namespace InformationSearchBasics.Crawler
 {
     internal class Program
     {

@@ -1,9 +1,9 @@
 ﻿using System.IO;
 using System.Linq;
+using InformationSearchBasics.SearchParamsCalculator.Commands;
 using InformationSearchBasics.Utils.Csv;
-using SearchParamsCalculator.Commands;
 
-namespace SearchParamsCalculator
+namespace InformationSearchBasics.SearchParamsCalculator
 {
     class Program
     {
@@ -48,11 +48,13 @@ namespace SearchParamsCalculator
                 .Handle(tfCalcResult, idfCalcResult)
                 .Select(tfp => new object[] {
                     tfp.Term,
-                    tfp.Value });
+                    tfp.Value,
+                    tfp.DocumentName
+                });
 
             new CsvWriter(
                     new CsvFileInfo(Path.Combine(resultPath, "tf-idf.csv"), ","),
-                    new CsvTableInfo(tfCols, tfTableData))
+                    new CsvTableInfo(tfIdfCols, tfIdfTableData))
                 .Write();
         }
     }

@@ -1,9 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using System.Text;
 
-namespace Index
+namespace InformationSearchBasics.Index
 {
     class Program
     {
@@ -15,7 +14,7 @@ namespace Index
                 .Build()
                 .Index;
 
-            Console.WriteLine("Test Boolean Search...");
+            Console.WriteLine("Test Boolean Search...\n\r");
 
             while (true)
             {
@@ -23,10 +22,9 @@ namespace Index
                     .Provide(Console.ReadLine() ?? throw new ArgumentNullException())
                     .ToList();
 
-                if (resultDocs.Count != 0)
-                    resultDocs.ForEach(Console.WriteLine);
-                else
-                    Console.WriteLine("There are no results for this request...");
+                Console.WriteLine(resultDocs.Count != 0
+                    ? string.Join(" ", resultDocs.OrderBy(x => x)) + "\n\r"
+                    : "There are no results for this request...\n\r");
             }
         }
     }

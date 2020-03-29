@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using SearchParamsCalculator.Common;
+using InformationSearchBasics.SearchParamsCalculator.Common;
 
-namespace SearchParamsCalculator.Commands
+namespace InformationSearchBasics.SearchParamsCalculator.Commands
 {
     internal class TfIdfCalculateCommand
     {
@@ -23,7 +23,8 @@ namespace SearchParamsCalculator.Commands
                 idf => idf.Term,
                 (tf, idf)
                     => new DocumentBasedFrequencyCalculationResult(tf.Term, Math.Round(tf.Value * idf.Value, 5), tf.DocumentName))
-                .OrderBy(f => f.Value);
+                .OrderByDescending(f => f.Value)
+                .ThenBy(f => f.Term);
         }
     }
 }

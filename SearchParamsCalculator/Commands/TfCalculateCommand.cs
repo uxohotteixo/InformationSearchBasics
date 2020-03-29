@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using SearchParamsCalculator.Common;
+using InformationSearchBasics.SearchParamsCalculator.Common;
 
-namespace SearchParamsCalculator.Commands
+namespace InformationSearchBasics.SearchParamsCalculator.Commands
 {
     internal class TfCalculateCommand
     {
@@ -32,13 +32,14 @@ namespace SearchParamsCalculator.Commands
                     .Where(g => !string.IsNullOrEmpty(g.Key))
                     .Select(g => new DocumentBasedFrequencyCalculationResult(
                         g.Key, 
-                         Math.Round((double) g.Count() / fileText.Length, 5), 
+                         Math.Round(g.Count() / (double) fileText.Length, 5), 
                         fileName.Replace(_docsFolderPath + "\\", "")));
 
                 result.AddRange(tfParamsList);
             }
 
-            return result.OrderBy(r => r.Term).ThenByDescending(tfp => tfp.Value);
+            return result.OrderByDescending(tfp => tfp.Value)
+                .ThenBy(tfp => tfp.Term);
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Index
+namespace InformationSearchBasics.Index
 {
     internal class DocumentsProvider
     {

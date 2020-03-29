@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using InformationSearchBasics.Utils.Csv;
 
-namespace Crawler.Crawler
+namespace InformationSearchBasics.Crawler.Crawler
 {
     public class DefaultCrawler
     {

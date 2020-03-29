@@ -1,4 +1,4 @@
-﻿﻿namespace MyStem.Sharp
+﻿﻿namespace InformationSearchBasics.Lemmatizer
 {
     public class WordDefenition
     {

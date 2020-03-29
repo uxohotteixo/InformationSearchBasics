@@ -1,4 +1,4 @@
-﻿namespace SearchParamsCalculator.Common
+﻿namespace InformationSearchBasics.SearchParamsCalculator.Common
 {
     internal class DocumentBasedFrequencyCalculationResult : FrequencyCalculationResultBase
     {

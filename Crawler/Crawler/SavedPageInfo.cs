@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Crawler.Crawler
+﻿namespace InformationSearchBasics.Crawler.Crawler
 {
     public class SavedPageInfo
     {

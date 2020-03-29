@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using SearchParamsCalculator.Common;
+using InformationSearchBasics.SearchParamsCalculator.Common;
 
-namespace SearchParamsCalculator.Commands
+namespace InformationSearchBasics.SearchParamsCalculator.Commands
 {
     internal class IdfCalculateCommand
     {
@@ -47,7 +47,8 @@ namespace SearchParamsCalculator.Commands
                 new FrequencyCalculationResultBase(
                     kv.Key,
                     Math.Round(Math.Log2((double)docsCount / kv.Value.Count()), 5)))
-                .OrderBy(f => f.Value);
+                .OrderBy(f => f.Value)
+                .ThenBy(f => f.Term);
         }
     }
 }

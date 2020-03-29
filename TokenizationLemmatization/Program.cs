@@ -4,9 +4,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
-using MyStem.Sharp;
 
-namespace TokenizationLemmatization
+namespace InformationSearchBasics.TokenizationLemmatization
 {
     class Program
     {
@@ -39,7 +38,7 @@ namespace TokenizationLemmatization
 
                     var tokenized = string.Join(" ", tokens);
 
-                    var lemmas = new Lemmatizer("./mystem/mystem.exe").LemmatizeText(tokenized);
+                    var lemmas = new Lemmatizer.Lemmatizer("./mystem/mystem.exe").LemmatizeText(tokenized);
 
                     var a = file
                         .Replace(documentsFolderPath + "\\", "")

@@ -33,6 +33,7 @@ namespace InformationSearchBasics.Index
             {
                 var tokens = System.IO.File.ReadAllText(file)
                     .Split(' ')
+                    .Distinct()
                     .ToList();
 
                 IndexFile(tokens, file.Replace(_documentsPath + "\\", string.Empty));

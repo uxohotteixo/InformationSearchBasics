@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace Infrastructure
+namespace InformationSearchBasics.Index
 {
     public class IndexBuilder
     {
@@ -33,7 +33,6 @@ namespace Infrastructure
             {
                 var tokens = System.IO.File.ReadAllText(file)
                     .Split(' ')
-                    .Distinct()
                     .ToList();
 
                 IndexFile(tokens, file.Replace(_documentsPath + "\\", string.Empty));

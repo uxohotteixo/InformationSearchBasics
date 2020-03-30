@@ -10,11 +10,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Lemmatizer\InformationSearchBasics.Lemmatizer.csproj" />
+      <Folder Include="mystem\" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="mystem\" />
+      <ProjectReference Include="..\InformationSearchBasics.Lemmatizer\InformationSearchBasics.Lemmatizer.csproj" />
     </ItemGroup>
 
     <ItemGroup>

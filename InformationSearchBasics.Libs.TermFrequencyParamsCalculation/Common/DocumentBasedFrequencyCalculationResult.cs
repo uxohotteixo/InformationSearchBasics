@@ -1,6 +1,6 @@
-﻿namespace InformationSearchBasics.SearchParamsCalculator.Common
+﻿namespace InformationSearchBasics.Libs.TermFrequencyParamsCalculation.Common
 {
-    internal class DocumentBasedFrequencyCalculationResult : FrequencyCalculationResultBase
+    public class DocumentBasedFrequencyCalculationResult : FrequencyCalculationResultBase
     {
         public DocumentBasedFrequencyCalculationResult(string term, double value, string documentName) : base(term, value)
         {

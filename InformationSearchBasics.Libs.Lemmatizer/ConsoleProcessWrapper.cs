@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 
-namespace InformationSearchBasics.Lemmatizer
+namespace InformationSearchBasics.Libs.Lemmatizer
 {
     internal class ConsoleProcessWrapper: IDisposable
     {

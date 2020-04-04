@@ -1,4 +1,4 @@
-﻿namespace InformationSearchBasics.Utils.Csv
+﻿namespace InformationSearchBasics.Libs.Csv.Csv
 {
     public class CsvFileInfo
     {

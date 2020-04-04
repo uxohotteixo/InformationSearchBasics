@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using InformationSearchBasics.SearchParamsCalculator.Common;
+using InformationSearchBasics.Libs.TermFrequencyParamsCalculation.Common;
 
-namespace InformationSearchBasics.SearchParamsCalculator.Commands
+namespace InformationSearchBasics.Libs.TermFrequencyParamsCalculation.Commands
 {
-    internal class TfCalculateCommand
+    public class TfCalculateCommand
     {
         private readonly string _docsFolderPath;
 
@@ -29,10 +29,9 @@ namespace InformationSearchBasics.SearchParamsCalculator.Commands
                     .Split(' ')
                     .Where(w => !string.IsNullOrEmpty(w))
                     .GroupBy(w => w)
-                    .Where(g => !string.IsNullOrEmpty(g.Key))
                     .Select(g => new DocumentBasedFrequencyCalculationResult(
-                        g.Key, 
-                         Math.Round(g.Count() / (double) fileText.Length, 5), 
+                        g.Key,
+                         Math.Round(g.Count() / (double)fileText.Length, 5),
                         fileName.Replace(_docsFolderPath + "\\", "")));
 
                 result.AddRange(tfParamsList);

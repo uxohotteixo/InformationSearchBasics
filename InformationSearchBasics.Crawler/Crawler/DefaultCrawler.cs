@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using InformationSearchBasics.Utils.Csv;
+using InformationSearchBasics.Libs.Csv.Csv;
 
 namespace InformationSearchBasics.Crawler.Crawler
 {

@@ -6,7 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\InformationSearchBasics.Utils\InformationSearchBasics.Utils.csproj" />
+    <ProjectReference Include="..\InformationSearchBasics.Constants\InformationSearchBasics.Constants.csproj" />
+    <ProjectReference Include="..\InformationSearchBasics.Libs.Csv\InformationSearchBasics.Libs.Csv.csproj" />
+    <ProjectReference Include="..\InformationSearchBasics.Libs.TermFrequencyParamsCalculation\InformationSearchBasics.Libs.TermFrequencyParamsCalculation.csproj" />
   </ItemGroup>
 
 </Project>

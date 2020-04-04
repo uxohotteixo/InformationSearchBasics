@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json.Linq;
 
-namespace InformationSearchBasics.Lemmatizer
+namespace InformationSearchBasics.Libs.Lemmatizer
 {
     public class Lemmatizer : IDisposable
     {

@@ -1,7 +1,8 @@
 ﻿using System.IO;
 using System.Linq;
-using InformationSearchBasics.SearchParamsCalculator.Commands;
-using InformationSearchBasics.Utils.Csv;
+using InformationSearchBasics.Constants;
+using InformationSearchBasics.Libs.Csv.Csv;
+using InformationSearchBasics.Libs.TermFrequencyParamsCalculation.Commands;
 
 namespace InformationSearchBasics.SearchParamsCalculator
 {
@@ -9,8 +10,8 @@ namespace InformationSearchBasics.SearchParamsCalculator
     {
         static void Main(string[] args)
         {
-            var sourcePath = Path.Combine(System.IO.Path.GetFullPath(@"..\..\..\..\"), "LemmatizationResult");
-            var resultPath = Path.Combine(System.IO.Path.GetFullPath(@"..\..\..\..\"), "Statistic");
+            var sourcePath = Path.Combine(PathConstants.LemmatizationResultPath);
+            var resultPath = Path.Combine(PathConstants.SearchParamsPath);
 
             if (!Directory.Exists(resultPath))
                 Directory.CreateDirectory(resultPath);
@@ -44,8 +45,8 @@ namespace InformationSearchBasics.SearchParamsCalculator
 
             // Tf-Idf data prepared.
             var tfIdfCols = new[] { "term", "tf-idf", "document"};
-            var tfIdfTableData = new TfIdfCalculateCommand(sourcePath)
-                .Handle(tfCalcResult, idfCalcResult)
+            var tfIdfTableData = new TfIdfCalculateCommand(tfCalcResult, idfCalcResult)
+                .Handle()
                 .Select(tfp => new object[] {
                     tfp.Term,
                     tfp.Value,

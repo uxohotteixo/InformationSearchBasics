@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 
-namespace InformationSearchBasics.Utils.Csv
+namespace InformationSearchBasics.Libs.Csv.Csv
 {
     public class CsvWriter
     {

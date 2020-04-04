@@ -5,15 +5,25 @@ VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InformationSearchBasics.Crawler", "InformationSearchBasics.Crawler\InformationSearchBasics.Crawler.csproj", "{00700071-9820-4181-AEE5-31B313F4B847}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InformationSearchBasics.Lemmatizer", "InformationSearchBasics.Lemmatizer\InformationSearchBasics.Lemmatizer.csproj", "{C1A0AF1E-F6A5-4AC0-B105-73380BE4CD5A}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InformationSearchBasics.TokenizationLemmatization", "InformationSearchBasics.TokenizationLemmatization\InformationSearchBasics.TokenizationLemmatization.csproj", "{539E4808-7023-408D-A8C6-5632D375116E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InformationSearchBasics.Index", "InformationSearchBasics.Index\InformationSearchBasics.Index.csproj", "{1D616ED3-876C-42FF-AC47-ED66C9E75974}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InformationSearchBasics.SearchParamsCalculator", "InformationSearchBasics.SearchParamsCalculator\InformationSearchBasics.SearchParamsCalculator.csproj", "{9A2F7F79-1661-4FDB-AAFD-93FB2918FD74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InformationSearchBasics.SearchParamsCalculator", "InformationSearchBasics.SearchParamsCalculator\InformationSearchBasics.SearchParamsCalculator.csproj", "{9A2F7F79-1661-4FDB-AAFD-93FB2918FD74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InformationSearchBasics.Utils", "InformationSearchBasics.Utils\InformationSearchBasics.Utils.csproj", "{57379E1C-EF68-41A4-B2D0-20D1C7902595}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InformationSearchBasics.Libs.Csv", "InformationSearchBasics.Libs.Csv\InformationSearchBasics.Libs.Csv.csproj", "{57379E1C-EF68-41A4-B2D0-20D1C7902595}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InformationSearchBasics.VectorSearch", "InformationSearchBasics.VectorSearch\InformationSearchBasics.VectorSearch.csproj", "{D76AD074-1F87-4508-8F71-74F8C685AE3E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InformationSearchBasics.Constants", "InformationSearchBasics.Constants\InformationSearchBasics.Constants.csproj", "{2B90F995-295A-4A3B-9059-8A1E987A1FB9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{1DE0E8A3-A102-493E-A305-6952963456AB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InformationSearchBasics.Libs.Lemmatizer", "InformationSearchBasics.Libs.Lemmatizer\InformationSearchBasics.Libs.Lemmatizer.csproj", "{45AE5FB5-7CF4-4DDF-83DC-F0725159C778}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InformationSearchBasics.Libs.TermFrequencyParamsCalculation", "InformationSearchBasics.Libs.TermFrequencyParamsCalculation\InformationSearchBasics.Libs.TermFrequencyParamsCalculation.csproj", "{68195F81-84E7-49CF-A2AB-10D3CB8C86D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{295C9C31-A773-4A95-B853-E9B4D1672E7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +35,6 @@ Global
 		{00700071-9820-4181-AEE5-31B313F4B847}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00700071-9820-4181-AEE5-31B313F4B847}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00700071-9820-4181-AEE5-31B313F4B847}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C1A0AF1E-F6A5-4AC0-B105-73380BE4CD5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C1A0AF1E-F6A5-4AC0-B105-73380BE4CD5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C1A0AF1E-F6A5-4AC0-B105-73380BE4CD5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C1A0AF1E-F6A5-4AC0-B105-73380BE4CD5A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{539E4808-7023-408D-A8C6-5632D375116E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{539E4808-7023-408D-A8C6-5632D375116E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{539E4808-7023-408D-A8C6-5632D375116E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,9 +51,31 @@ Global
 		{57379E1C-EF68-41A4-B2D0-20D1C7902595}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57379E1C-EF68-41A4-B2D0-20D1C7902595}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57379E1C-EF68-41A4-B2D0-20D1C7902595}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D76AD074-1F87-4508-8F71-74F8C685AE3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D76AD074-1F87-4508-8F71-74F8C685AE3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D76AD074-1F87-4508-8F71-74F8C685AE3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D76AD074-1F87-4508-8F71-74F8C685AE3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B90F995-295A-4A3B-9059-8A1E987A1FB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B90F995-295A-4A3B-9059-8A1E987A1FB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B90F995-295A-4A3B-9059-8A1E987A1FB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B90F995-295A-4A3B-9059-8A1E987A1FB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45AE5FB5-7CF4-4DDF-83DC-F0725159C778}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45AE5FB5-7CF4-4DDF-83DC-F0725159C778}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45AE5FB5-7CF4-4DDF-83DC-F0725159C778}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45AE5FB5-7CF4-4DDF-83DC-F0725159C778}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68195F81-84E7-49CF-A2AB-10D3CB8C86D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68195F81-84E7-49CF-A2AB-10D3CB8C86D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68195F81-84E7-49CF-A2AB-10D3CB8C86D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68195F81-84E7-49CF-A2AB-10D3CB8C86D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{57379E1C-EF68-41A4-B2D0-20D1C7902595} = {1DE0E8A3-A102-493E-A305-6952963456AB}
+		{2B90F995-295A-4A3B-9059-8A1E987A1FB9} = {295C9C31-A773-4A95-B853-E9B4D1672E7B}
+		{45AE5FB5-7CF4-4DDF-83DC-F0725159C778} = {1DE0E8A3-A102-493E-A305-6952963456AB}
+		{68195F81-84E7-49CF-A2AB-10D3CB8C86D9} = {1DE0E8A3-A102-493E-A305-6952963456AB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {963F79B8-7370-4DF9-A0DB-3E98B49633CA}

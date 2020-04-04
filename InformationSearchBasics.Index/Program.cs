@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using InformationSearchBasics.Constants;
 
 namespace InformationSearchBasics.Index
 {
@@ -10,7 +11,7 @@ namespace InformationSearchBasics.Index
         {
             Console.WriteLine("Index is under construction, wait...");
 
-            var index = new IndexBuilder(Path.Combine(System.IO.Path.GetFullPath(@"..\..\..\..\"), "LemmatizationResult"))
+            var index = new IndexBuilder(Path.Combine(PathConstants.LemmatizationResultPath))
                 .Build()
                 .Index;
 

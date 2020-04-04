@@ -14,7 +14,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\InformationSearchBasics.Lemmatizer\InformationSearchBasics.Lemmatizer.csproj" />
+      <ProjectReference Include="..\InformationSearchBasics.Constants\InformationSearchBasics.Constants.csproj" />
+      <ProjectReference Include="..\InformationSearchBasics.Libs.Lemmatizer\InformationSearchBasics.Libs.Lemmatizer.csproj" />
     </ItemGroup>
 
     <ItemGroup>

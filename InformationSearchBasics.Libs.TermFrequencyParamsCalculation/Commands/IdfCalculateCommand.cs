@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using InformationSearchBasics.SearchParamsCalculator.Common;
+using InformationSearchBasics.Libs.TermFrequencyParamsCalculation.Common;
 
-namespace InformationSearchBasics.SearchParamsCalculator.Commands
+namespace InformationSearchBasics.Libs.TermFrequencyParamsCalculation.Commands
 {
-    internal class IdfCalculateCommand
+    public class IdfCalculateCommand
     {
         private readonly string _docsFolderPath;
 

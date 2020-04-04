@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace InformationSearchBasics.Utils.Csv
+namespace InformationSearchBasics.Libs.Csv.Csv
 {
     public class CsvTableInfo
     {

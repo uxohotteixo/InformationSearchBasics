@@ -1,4 +1,4 @@
-﻿﻿namespace InformationSearchBasics.Lemmatizer
+﻿﻿namespace InformationSearchBasics.Libs.Lemmatizer
 {
     public struct Defenition
     {

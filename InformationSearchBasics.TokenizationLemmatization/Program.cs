@@ -4,6 +4,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
+using InformationSearchBasics.Constants;
+using InformationSearchBasics.Libs.Lemmatizer;
 
 namespace InformationSearchBasics.TokenizationLemmatization
 {
@@ -11,10 +13,9 @@ namespace InformationSearchBasics.TokenizationLemmatization
     {
         static async Task Main(string[] args)
         {
-            var projectPath = System.IO.Path.GetFullPath(@"..\..\..\..\");
-            var documentsFolderPath = Path.Combine(projectPath, "CrawlerResults");
+            var documentsFolderPath = PathConstants.CrawlerResultPath;
 
-            var resultFolderPath = Path.Combine(projectPath, "LemmatizationResult");
+            var resultFolderPath = PathConstants.LemmatizationResultPath;
 
             if (!Directory.Exists(resultFolderPath))
                 Directory.CreateDirectory(resultFolderPath);
@@ -34,15 +35,13 @@ namespace InformationSearchBasics.TokenizationLemmatization
 
                     var tokens = regex.Matches(rootNode.InnerText)
                         .Select(x => x.ToString())
-                        .Where(x => !string.IsNullOrEmpty(x));
+                        .Where(x => !string.IsNullOrEmpty(x) && !string.IsNullOrWhiteSpace(x));
 
                     var tokenized = string.Join(" ", tokens);
 
-                    var lemmas = new Lemmatizer.Lemmatizer("./mystem/mystem.exe").LemmatizeText(tokenized);
-
-                    var a = file
-                        .Replace(documentsFolderPath + "\\", "")
-                        .Replace(".html", ".txt");
+                    var lemmas = new Lemmatizer("./mystem/mystem.exe").LemmatizeText(tokenized)
+                        .Trim()
+                        .Replace("   ", " ");
 
                     var outputPath = Path.Combine(resultFolderPath, file
                         .Replace(documentsFolderPath + "\\", "")

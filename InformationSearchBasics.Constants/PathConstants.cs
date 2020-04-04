@@ -4,7 +4,7 @@ namespace InformationSearchBasics.Constants
 {
     public class PathConstants
     {
-        public static string BaseResultPath = Path.GetFullPath(@"..\..\..\..\");
+        public static string BaseResultPath = Path.GetFullPath(@"..\..\..\..\Results");
 
         public static string CrawlerResultPath = Path.Combine(BaseResultPath, "CrawlerResults");
 

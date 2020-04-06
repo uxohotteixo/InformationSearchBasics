@@ -43,7 +43,7 @@ namespace InformationSearchBasics.Index
             new CsvWriter(
                     new CsvFileInfo(Path.Combine(PathConstants.InvertedIndexResultPath, "index.csv"), ","),
                     new CsvTableInfo(new[] {"Word", "Documents"},
-                        index.Select(x => new[] {x.Key, string.Join(", ", x.Value)})))
+                        index.Select(x => new[] {x.Key, string.Join(" ", x.Value)})))
                 .Write();
         }
     }

@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\InformationSearchBasics.Constants\InformationSearchBasics.Constants.csproj" />
+    <ProjectReference Include="..\InformationSearchBasics.Libs.Csv\InformationSearchBasics.Libs.Csv.csproj" />
   </ItemGroup>
 
 </Project>

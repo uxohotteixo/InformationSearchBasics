@@ -11,5 +11,7 @@ namespace InformationSearchBasics.Constants
         public static string LemmatizationResultPath = Path.Combine(BaseResultPath, "LemmatizationResult");
 
         public static string SearchParamsPath = Path.Combine(BaseResultPath, "Statistic");
+
+        public static string InvertedIndexResultPath = Path.Combine(BaseResultPath, "Index");
     }
 }
